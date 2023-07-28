@@ -13,15 +13,16 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
+.App-main {
+  background-image: url("/public/images/bg-main-desktop.png");
+  background-repeat: no-repeat;
+  background-color: rgb(255, 255, 255);
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  flex-direction:row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -35,4 +36,171 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  color: white;
+  margin-right: 50px;
+  height: 360px;
+}
+
+.card1{
+  width: 100%;
+}
+
+.card2{
+  width: 100%;
+  display: flex;
+  justify-content:center;
+  flex-direction: column;
+  align-items:flex-end;
+}
+
+.front-card{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("/public/images/bg-card-front.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 165px;
+  background-position: center;
+}
+
+.esferas{
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+.bola1{
+  margin: 20px;
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.bola2{
+  height: 10px;
+  width: 10px;
+  border-radius: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(255, 255, 255);
+}
+
+
+.back-card{
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  background-image: url("/public/images/bg-card-back.png");
+  background-size: 300px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 165px;
+  background-position: center;
+  margin-top: 20px;
+}
+
+.formulario-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.date-cvc, .name-date{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+
+.date{
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  justify-content:center;
+}
+
+.cvc, #cvc{
+  display: flex;
+  align-items:flex-start;
+  flex-direction: column;
+  justify-content:center;
+  width: auto;
+}
+
+.dados{
+  padding: 8px;
+  border-radius: 5px;
+  border-color: rgba(0, 0, 0, 0.123);
+  color: rgba(0, 0, 0, 0.67);
+  border-width: 2px;
+  font-style: bold;
+  font-size: 15px;
+  width: 95%;
+  font-weight: bold
+} .dados::-webkit-inner-spin-button,
+  .dados::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+} .dados::placeholder{
+  color: rgba(0, 0, 0, 0.363);
+  font-weight: bold
+}
+
+
+
+#mm, #yy{
+  width: 50px;
+  margin-right:10px;
+
+}
+
+.titulo, .dados-card{
+  color: black;
+  font-family:monospace;
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-top: 20px;
+  font-weight: bold
+}
+
+.number-card, .dados-card{
+  margin: 0;
+  font-family:monospace;
+  margin-top: 20px;
+  color: white;
+}
+
+#date-card{
+  margin-left: 100px;
+}
+#cvc-card{
+  margin: 0;
+  margin-right: 40px;
+}
+
+.botao{
+  width: 92%;
+  font-size: 15px;
+  padding:9px;
+  margin-top:20px;
+  border-radius: 5px;
+  border: 0px;
+  color: rgb(255, 255, 255);
+  background-color: #000000;
 }
