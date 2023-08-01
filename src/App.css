@@ -145,12 +145,12 @@
 }
 
 .dados{
+  cursor: pointer;
   padding: 8px;
   border-radius: 5px;
   border-color: rgba(0, 0, 0, 0.123);
   color: rgba(0, 0, 0, 0.67);
   border-width: 2px;
-  font-style: bold;
   font-size: 15px;
   width: 95%;
   font-weight: bold
@@ -176,7 +176,7 @@
   text-transform: uppercase;
   font-size: 13px;
   margin-top: 20px;
-  font-weight: bold
+  font-weight: bold;
 }
 
 .number-card, .dados-card{
@@ -186,7 +186,7 @@
   color: white;
 }
 
-#date-card{
+#mm-card{
   margin-left: 100px;
 }
 #cvc-card{
@@ -195,7 +195,7 @@
 }
 
 .botao{
-  width: 92%;
+  width: 100%;
   font-size: 15px;
   padding:9px;
   margin-top:20px;
@@ -203,4 +203,14 @@
   border: 0px;
   color: rgb(255, 255, 255);
   background-color: #000000;
+  cursor: pointer;
+}
+
+.error-blank{
+  margin: 0;
+  padding: auto;
+  color: red;
+  font-weight:400;
+  font-size: 12px;
+  display: none;
 }
