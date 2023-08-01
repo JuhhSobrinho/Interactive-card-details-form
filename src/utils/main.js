@@ -1,3 +1,7 @@
+import '../App.css';
+import icon from '../logo.svg';
+
+
 export function main() {
     const botao = document.querySelector(".botao");
 
@@ -17,6 +21,7 @@ export function main() {
     const border = document.querySelectorAll(".dados");
     const errorBlank = document.querySelectorAll(".error-blank");
 
+    const formularioCard = document.querySelector(".formulario-card");
 
 
     cardNumber.addEventListener('input', () => {
@@ -24,7 +29,7 @@ export function main() {
         if (cardNumber.value === '') {
             let vazio = '0000 0000 0000 0000';
             numberCard.innerHTML = vazio;
-        } else if (cardNumber.value !== null && cardNumber.value !== undefined && cardNumber.value !== ""){
+        } else if (cardNumber.value !== null && cardNumber.value !== undefined && cardNumber.value !== "") {
             numberCard.innerHTML = cardNumber.value.toString().match(/.{1,4}/g).join(' ');
         }
 
@@ -32,7 +37,7 @@ export function main() {
 
     cardHolder.addEventListener('input', () => {
         holderCard.innerHTML = cardHolder.value;
-        
+
         if (cardHolder.value === '') {
             let vazio = 'jane appleseed';
             holderCard.innerHTML = vazio;
@@ -72,24 +77,44 @@ export function main() {
 
         let cardAdd = true;
 
-        for (let i = 0; i < border.length; i++) {
-          const elementBorder = border[i];
-          const elementError = i === 4 ? errorBlank[errorBlank.length - 1] : errorBlank[i];
+        let cardAddHTML = '';
 
-          
-          if (elementBorder.value === '') {
-            elementBorder.style.boxShadow = '0 0 5px red';
-            elementError.style.display = 'flex';
-            cardAdd = false;
-          } else {
-            elementBorder.style.boxShadow = '0 0 0px red';
-            elementError.style.display = 'none';
-          }
-          
+        for (let i = 0; i < border.length; i++) {
+            const elementBorder = border[i];
+            const elementError = i === 4 ? errorBlank[errorBlank.length - 1] : errorBlank[i];
+
+
+            if (elementBorder.value === '') {
+                elementBorder.style.boxShadow = '0 0 5px red';
+                elementError.style.display = 'flex';
+                cardAdd = false;
+            } else {
+                elementBorder.style.boxShadow = '0 0 0px red';
+                elementError.style.display = 'none';
+            }
+
         }
-        
+
         if (cardAdd) {
             console.log("funfo");
+
+            const formularioAdd = document.querySelector(".formulario");
+
+
+            formularioCard.style.display = 'none';
+
+            cardAddHTML +=`
+            <section class='card-add'>
+
+                <img class='icon-add' src="${icon}" alt="Logo" />
+                <h1 class='thank-you'>thank you!</h1>
+                <p class='dados-card' id='descricao-card-add'>We've added your card details</p>
+        
+                <input type='submit' class='botao' id="botaoContinue" value='continue'></input>
+            </section>`;
+
+            formularioAdd.innerHTML = cardAddHTML;
+
         }
 
     });

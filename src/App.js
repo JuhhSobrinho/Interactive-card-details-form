@@ -1,6 +1,6 @@
 import './App.css';
 import { main } from './utils/main';
-import { useEffect } from 'react';
+import { useEffect, img } from 'react';
 
 function App() {
 
@@ -39,41 +39,42 @@ function App() {
         </section>
 
 
+        <section className='formulario'>
+          <div className='formulario-card'>
 
-        <div className='formulario-card'>
+            <label className='titulo'> Cardholder Name</label>
+            <input type='text' className='dados' id='cardholder-name' placeholder='e.g. Jane Appleseed'></input>
+            <h6 className='error-blank'>can't be blank</h6>
 
-          <label className='titulo'> Cardholder Name</label>
-          <input type='text' className='dados' id='cardholder-name' placeholder='e.g. Jane Appleseed'></input>
-          <h6 className='error-blank'>can't be blank</h6>
-
-          <label className='titulo'> Card Number</label>
-          <input type='number' className='dados' id="cardNumber" placeholder='e.g. 1234 5678 9123 0000'></input>
-          <h6 className='error-blank'>can't be blank</h6>
+            <label className='titulo'> Card Number</label>
+            <input type='number' className='dados' id="cardNumber" placeholder='e.g. 1234 5678 9123 0000'></input>
+            <h6 className='error-blank'>can't be blank</h6>
 
 
-          <section className='date-cvc'>
-            <div className='date'>
-              <label className='titulo'>Exp. Date (MM/YY)</label>
-              <div className='mm-yy'>
-                <input type='number' className='dados' id='mm' placeholder='MM'></input>
-                <input type='number' className='dados' id='yy' placeholder='YY'></input>
+            <section className='date-cvc'>
+              <div className='date'>
+                <label className='titulo'>Exp. Date (MM/YY)</label>
+                <div className='mm-yy'>
+                  <input type='number' className='dados' id='mm' placeholder='MM'></input>
+                  <input type='number' className='dados' id='yy' placeholder='YY'></input>
+                  <h6 className='error-blank'>can't be blank</h6>
+                </div>
+              </div>
+
+              <div className='cvc'>
+                <label className='titulo'>cvc</label>
+                <input type='number' className='dados' id='cvc' placeholder='e.g. 123'></input>
                 <h6 className='error-blank'>can't be blank</h6>
               </div>
-            </div>
-
-            <div className='cvc'>
-              <label className='titulo'>cvc</label>
-              <input type='number' className='dados' id='cvc' placeholder='e.g. 123'></input>
-              <h6 className='error-blank'>can't be blank</h6>
-            </div>
-          </section>
+            </section>
 
 
 
-          <input type='submit' className='botao' id="botao" value='Confirm'></input>
+            <input type='submit' className='botao' id="botao" value='Confirm'></input>
 
+          </div>
+        </section>
 
-        </div>
       </main>
     </div>
   );
