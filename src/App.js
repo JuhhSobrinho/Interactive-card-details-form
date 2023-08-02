@@ -1,6 +1,6 @@
 import './App.css';
 import { main } from './utils/main';
-import { useEffect, img } from 'react';
+import { useEffect} from 'react';
 
 function App() {
 
