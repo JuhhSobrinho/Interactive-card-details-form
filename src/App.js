@@ -57,8 +57,8 @@ function App() {
                 <div className='mm-yy'>
                   <input type='number' className='dados' id='mm' placeholder='MM'></input>
                   <input type='number' className='dados' id='yy' placeholder='YY'></input>
-                  <h6 className='error-blank'>can't be blank</h6>
                 </div>
+                <h6 className='error-blank'>can't be blank</h6>
               </div>
 
               <div className='cvc'>

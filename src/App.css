@@ -18,7 +18,7 @@
   background-repeat: no-repeat;
   background-color: rgb(255, 255, 255);
   min-height: 100vh;
-  background-size: 100vh;
+  background-size: 89vh;
   display: flex;
   flex-direction:row;
   align-items: center;
@@ -262,9 +262,9 @@
   
   .App-main{
     display: flex;
-    align-items:center;
+    flex-direction:column;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
     min-height: 0;
   }
 
